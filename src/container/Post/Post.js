@@ -5,10 +5,10 @@ import "./style.css";
 import BlogPost from "../../components/BlogPost/BlogPost";
 import Sidebar from "../../components/Sidebar/Sidebar";
 
-const Post = () => {
+const Post = props => {
   return (
     <section className="container">
-      <BlogPost />
+      <BlogPost {...props} />
       <Sidebar />
     </section>
   );
