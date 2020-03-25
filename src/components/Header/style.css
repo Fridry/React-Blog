@@ -16,3 +16,15 @@
 .headerMenu a:hover {
   color: #5f9ea0;
 }
+
+.socialMedia i {
+  display: inline-block;
+  margin: 0 5px;
+  text-decoration: none;
+  color: #565673;
+  font-size: 18px;
+}
+
+.socialMedia i:hover {
+  color: #5f9ea0;
+}

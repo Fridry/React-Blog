@@ -1,16 +1,15 @@
 import React from "react";
 
-import "./style.css";
-
 import BlogPost from "../../components/BlogPost/BlogPost";
-import Sidebar from "../../components/Sidebar/Sidebar";
+import Layout from "../../components/Layout/Layout";
+
+import "./style.css";
 
 const Post = props => {
   return (
-    <section className="container">
+    <Layout>
       <BlogPost {...props} />
-      <Sidebar />
-    </section>
+    </Layout>
   );
 };
 

@@ -1,0 +1,25 @@
+.aboutTitle {
+  letter-spacing: 0.5px;
+  text-transform: capitalize;
+  font-size: 30px;
+  margin: 0;
+  text-align: center;
+}
+
+.aboutContent {
+  margin: 10px;
+}
+
+.aboutContent h3 {
+  font-weight: 400;
+  color: #333;
+}
+
+.aboutContent p {
+  font-size: 14px;
+  color: #6c6c6c;
+  font-weight: 300;
+  letter-spacing: 1px;
+  padding-bottom: 20px;
+  text-align: justify;
+}

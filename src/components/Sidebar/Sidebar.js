@@ -9,7 +9,7 @@ import blogPosts from "../../data/posts.json";
 
 import "./style.css";
 
-const Sidebar = props => {
+const Sidebar = (props, isPost) => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
@@ -18,6 +18,10 @@ const Sidebar = props => {
 
     setPosts(posts);
   }, [posts]);
+
+  let routeOpt = props.routeOption;
+
+  if (routeOpt === undefined) routeOpt = "";
 
   return (
     <div className="sidebarContainer">
@@ -46,6 +50,29 @@ const Sidebar = props => {
       >
         <div className="cardHeader">
           <span>Social network</span>
+          <div className="socialMedia">
+            <a href="https://twitter.com">
+              <i className="fab fa-twitter-square"></i>
+            </a>
+            <a href="https://www.instagram.com/">
+              <i className="fab fa-instagram-square"></i>
+            </a>
+            <a href="https://www.pinterest.com/">
+              <i className="fab fa-pinterest-square"></i>
+            </a>
+            <a href="https://www.tumblr.com/">
+              <i className="fab fa-tumblr-square"></i>
+            </a>
+            <a href="https://web.whatsapp.com/">
+              <i className="fab fa-whatsapp-square"></i>
+            </a>
+            <a href="https://github.com/">
+              <i className="fab fa-github-square"></i>
+            </a>
+            <a href="https://wwww.linkedin.com/">
+              <i className="fab fa-linkedin"></i>
+            </a>
+          </div>
         </div>
       </Card>
 
@@ -59,8 +86,11 @@ const Sidebar = props => {
         <div className="recentPosts">
           {posts.map(post => {
             return (
-              <div className="recentPost">
-                <Link to={`${post.id}`} style={{ textDecoration: "none" }}>
+              <div className="recentPost" key={post.id}>
+                <Link
+                  to={`${routeOpt}${post.id}`}
+                  style={{ textDecoration: "none" }}
+                >
                   <h3>{post.blogTitle}</h3>
                 </Link>
                 <span>{post.postedOn}</span>

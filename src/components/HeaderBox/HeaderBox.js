@@ -3,7 +3,7 @@ import Card from "../UI/Card/Card";
 import Logo from "../Logo/Logo";
 import Navbar from "../Navbar/Navbar";
 
-const Hero = () => {
+const HeaderBox = () => {
   return (
     <div>
       <Card>
@@ -16,4 +16,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default HeaderBox;

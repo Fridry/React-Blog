@@ -1,5 +1,6 @@
 .sidebarContainer {
-  width: 27%;
+  max-width: 100%;
+  padding-left: 20px;
 }
 
 .cardHeader {
@@ -50,4 +51,9 @@
   font-size: 12px;
   font-weight: 400;
   color: #6c6c6c;
+}
+
+.cardHeader div a i {
+  padding: 15px 0;
+  font-size: 30px;
 }
